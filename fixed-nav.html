@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фиксированное меню</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 15px 0;
+    }
+    
+    .content {
+      margin-top: 70px;
+      padding: 20px;
+      height: 2000px;
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    
+    .nav a:hover {
+      background: #555;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#">Главная</a>
+      <a href="#">О нас</a>
+      <a href="#">Услуги</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+  
+  <main class="content">
+    <h1>Добро пожаловать!</h1>
+    <p>Прокрутите страницу вниз, чтобы увидеть, что меню остается на месте.</p>
+  </main>
+</body>
+</html>

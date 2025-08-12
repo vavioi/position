@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фиксированная шапка + Sticky меню</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 100px;
+    }
+    
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+    
+    .sticky-menu-container {
+      position: sticky;
+      top: 60px;
+      height: 50px;
+      z-index: 1000;
+    }
+    
+    .sticky-menu {
+      height: 50px;
+      background: #3498db;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 999;
+    }
+    
+    .content {
+      position: relative;
+      top: 400px;
+      height: 2000px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Логотип</div>
+  </header>
+  <div class="sticky-menu-container">
+    <nav class="sticky-menu">
+      <a href="#" style="color: white; margin-right: 15px;">Главная</a>
+      <a href="#" style="color: white; margin-right: 15px;">О нас</a>
+      <a href="#" style="color: white;">Контакты</a>
+    </nav>
+  </div>
+  <main class="content">
+    <h1>Прокрутите вниз</h1>
+    <p>Меню прилипнет под шапкой после прокрутки</p>
+  </main>
+</body>
+</html>
